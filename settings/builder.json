@@ -1,0 +1,46 @@
+{
+  "title": "StickInAPin",
+  "packageName": "",
+  "startScene": "da615b69-ce32-4328-92f0-68c60929ba75",
+  "excludeScenes": [
+    "18e47191-67ae-4708-951a-3b6f43cfc0f2",
+    "8eea185c-fe4e-44d5-b947-0ed1708a472b"
+  ],
+  "includeSDKBox": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "webOrientation": "portrait",
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "md5Cache": true,
+  "encryptJs": true,
+  "xxteaKey": "e4fab789-b726-4f",
+  "zipCompressJs": true,
+  "fb-instant-games": {},
+  "android": {
+    "packageName": ""
+  },
+  "ios": {
+    "packageName": ""
+  },
+  "mac": {
+    "packageName": ""
+  },
+  "win32": {},
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "packageName": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "appBundle": false
+}

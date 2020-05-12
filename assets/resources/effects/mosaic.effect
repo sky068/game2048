@@ -1,0 +1,134 @@
+// Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.  
+
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: vs
+      frag: fs
+      blendState:
+        targets:
+        - blend: true
+      rasterizerState:
+        cullMode: none
+      properties:
+        texture: { value: white }
+        alphaThreshold: { value: 0.5 }
+        xBlockCount: {
+          value: 30.0,
+          editor: {
+            tooltip: "X轴方向马赛克方块的数量"
+          }
+        }
+        yBlockCount: {
+          value: 30.0,
+          editor: {
+            tooltip: "Y轴方向马赛克方块的数量"
+          }
+        }
+}%
+
+
+CCProgram vs %{
+  precision highp float;
+
+  #include <cc-global>
+  #include <cc-local>
+
+  in vec3 a_position;
+  in vec4 a_color;
+  out vec4 v_color;
+
+  #if USE_TEXTURE
+  in vec2 a_uv0;
+  out vec2 v_uv0;
+  #endif
+
+  void main () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if CC_USE_MODEL
+    pos = cc_matViewProj * cc_matWorld * pos;
+    #else
+    pos = cc_matViewProj * pos;
+    #endif
+
+    #if USE_TEXTURE
+    v_uv0 = a_uv0;
+    #endif
+
+    v_color = a_color;
+
+    gl_Position = pos;
+  }
+}%
+
+
+CCProgram fs %{
+  precision highp float;
+  
+  #include <alpha-test>
+
+  in vec4 v_color;
+
+  #if USE_TEXTURE
+  in vec2 v_uv0;
+  uniform sampler2D texture;
+  #endif
+
+  uniform Mosaic {
+    float xBlockCount;
+    float yBlockCount;
+  }
+
+ /**
+  * 获取v_uv0最终映射的马赛克格子的坐标
+  */
+  vec2 getUvMapPos() {
+    // 计算格子宽度
+    float xCount;
+    if (xBlockCount <= 0.0) {
+      xCount = 1.0;
+    } else {
+      xCount = xBlockCount;
+    }
+    float blockWidth = 1.0 / xCount;
+
+    // 计算当前v_uv0在x轴的哪个格子上
+    float blockXIndex = floor(v_uv0.x / blockWidth);
+
+    // 同理求当前v_uv0在y轴的哪个格子上
+    float yCount;
+    if (yBlockCount <= 0.0) {
+      yCount = 1.0;
+    } else {
+      yCount = yBlockCount;
+    }
+    float blockHeight = 1.0 / yCount;
+    float blockYIndex = floor(v_uv0.y / blockHeight);
+
+    // 找到该格子的中心点实际对应的uv坐标
+    return vec2(blockWidth * (blockXIndex + 0.5), blockHeight * (blockYIndex + 0.5));
+  }
+
+  void main () {
+    vec4 o = vec4(1.5, 1.5, 1.5, 1);
+
+    // realPos = v_uv0;
+    vec2 realPos = getUvMapPos();
+
+    #if USE_TEXTURE
+    o *= texture(texture, v_uv0);
+      #if CC_USE_ALPHA_ATLAS_TEXTURE
+      // o.a *= texture2D(texture, v_uv0 + vec2(0, 0.5)).r;
+      o.a *= texture2D(texture, realPos + vec2(0, 0.5)).r*0.0;
+
+      #endif
+    #endif
+
+    o *= v_color;
+
+    ALPHA_TEST(o);
+
+    gl_FragColor = o;
+  }
+}%

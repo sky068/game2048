@@ -1,0 +1,64 @@
+{
+  "start-scene": "da615b69-ce32-4328-92f0-68c60929ba75",
+  "group-list": [
+    "default",
+    "earth",
+    "small"
+  ],
+  "collision-matrix": [
+    [
+      false
+    ],
+    [
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      true
+    ]
+  ],
+  "excluded-modules": [
+    "EditBox",
+    "Graphics",
+    "Geom Utils",
+    "Mask",
+    "MotionStreak",
+    "NodePool",
+    "Physics",
+    "PageView",
+    "PageViewIndicator",
+    "ProgressBar",
+    "RichText",
+    "StudioComponent",
+    "TiledMap",
+    "VideoPlayer",
+    "3D",
+    "3D Primitive"
+  ],
+  "last-module-event-record-time": 1588239547844,
+  "design-resolution-width": 750,
+  "design-resolution-height": 1334,
+  "fit-width": false,
+  "fit-height": true,
+  "use-project-simulator-setting": true,
+  "simulator-orientation": false,
+  "use-customize-simulator": false,
+  "simulator-resolution": {
+    "height": 1334,
+    "width": 750
+  },
+  "assets-sort-type": "name",
+  "facebook": {
+    "appID": "",
+    "audience": {
+      "enable": false
+    },
+    "enable": false,
+    "live": {
+      "enable": false
+    }
+  }
+}

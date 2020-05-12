@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "circle_mask",
+    "texture": "a8b061df-0f25-4539-b649-f194fe654438",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      418,
+      418
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.Material",
+  "_name": "mosaicPhoto",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "dc9571ed-8b24-4202-a37c-21582c6951fe"
+  },
+  "_defines": {
+    "USE_TEXTURE": true
+  },
+  "_props": {
+    "xBlockCount": 20,
+    "yBlockCount": 20
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bm_font",
+    "texture": "9eb70c7c-b999-4f2d-9d4e-5dc370b30d43",
+    "atlas": "",
+    "rect": [
+      3,
+      4,
+      489,
+      402
+    ],
+    "offset": [
+      -8.5,
+      51
+    ],
+    "originalSize": [
+      512,
+      512
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
