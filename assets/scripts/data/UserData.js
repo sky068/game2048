@@ -6,7 +6,7 @@
 
 cc.Class({
     ctor() {
-        this.curLevel = 1; // 当前等级
+        this.bestScore = 0; 
     },
 
     saveData() {

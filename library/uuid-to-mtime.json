@@ -655,8 +655,8 @@
     "relativePath": "resources/materials/bright.mtl"
   },
   "ac5e0f56-5f75-4e5f-9799-a1ffb7694dbe": {
-    "asset": 1589252917010,
-    "meta": 1589252917023,
+    "asset": 1589273781228,
+    "meta": 1589273781233,
     "relativePath": "scenes/Game.fire"
   },
   "53b326cd-df52-4b45-9c1e-1a6475204839": {
@@ -1049,20 +1049,10 @@
     "meta": 1588238497431,
     "relativePath": "scripts/data/ConstData.js"
   },
-  "7336d1da-674c-4290-9304-f82791feaf62": {
-    "asset": 1588238335742,
-    "meta": 1588238497522,
-    "relativePath": "scripts/data/UserData.js"
-  },
   "ca989616-f35c-46f1-a4e6-2199ccfe7503": {
     "asset": 1588238182520,
     "meta": 1588238497531,
     "relativePath": "scripts/data/LevelData.js"
-  },
-  "93505d9a-9d7a-4d36-b9f0-d6e794908fc9": {
-    "asset": 1588238799958,
-    "meta": 1588238801363,
-    "relativePath": "scripts/data/DataMng.js"
   },
   "b6b88d30-814a-42cf-a6ca-4f80f7424da0": {
     "asset": 1588239222335,
@@ -1074,24 +1064,34 @@
     "meta": 1588239257346,
     "relativePath": "scripts/ClientConfig.js"
   },
-  "be329027-fed7-476d-b213-1ec636b0e563": {
-    "asset": 1588239320634,
-    "meta": 1588239321192,
-    "relativePath": "scripts/scene/InitScene.js"
-  },
   "12b8a66c-6f8b-47d2-9279-fb259fa6e26b": {
-    "asset": 1588850189775,
-    "meta": 1588850189778,
+    "asset": 1589271024033,
+    "meta": 1589271024036,
     "relativePath": "resources/prefabs/Cell.prefab"
   },
+  "be329027-fed7-476d-b213-1ec636b0e563": {
+    "asset": 1589270249969,
+    "meta": 1589270566987,
+    "relativePath": "scripts/scene/InitScene.js"
+  },
   "567e3783-0470-4636-b5c8-93b4d4d87468": {
-    "asset": 1588851876316,
-    "meta": 1588851877706,
+    "asset": 1589271115194,
+    "meta": 1589271296217,
     "relativePath": "scripts/Cell.js"
   },
+  "93505d9a-9d7a-4d36-b9f0-d6e794908fc9": {
+    "asset": 1589273275613,
+    "meta": 1589273354731,
+    "relativePath": "scripts/data/DataMng.js"
+  },
+  "7336d1da-674c-4290-9304-f82791feaf62": {
+    "asset": 1589273307134,
+    "meta": 1589273354888,
+    "relativePath": "scripts/data/UserData.js"
+  },
   "96793c0a-6a05-46f0-b1d3-76c8abba0676": {
-    "asset": 1589252915098,
-    "meta": 1589252916833,
+    "asset": 1589273751247,
+    "meta": 1589273753520,
     "relativePath": "scripts/scene/GameScene.js"
   }
 }

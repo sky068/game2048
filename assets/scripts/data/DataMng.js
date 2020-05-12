@@ -36,6 +36,12 @@ cc.Class({
         });
         cc.log("====keys2: %s", JSON.stringify(keys));
 
+        // 没有需要加载的本地配置
+        if (keys.length <= 0 && this.completeCb) {
+            this.completeCb();
+            return;
+        }
+        
         for (let key of keys) {
             let obj = this[key];
             let fileName = obj.fileDir;

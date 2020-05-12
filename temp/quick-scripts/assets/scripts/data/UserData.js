@@ -12,7 +12,7 @@ cc._RF.push(module, '7336dHaZ0xCkJME+CeR/q9i', 'UserData', __filename);
 
 cc.Class({
     ctor: function ctor() {
-        this.curLevel = 1; // 当前等级
+        this.bestScore = 0;
     },
     saveData: function saveData() {
         var obj = {};
