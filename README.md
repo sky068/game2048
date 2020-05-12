@@ -1,4 +1,4 @@
-# Stick In A Pin
+# 2048
 
 #### 介绍
 经典2048小游戏，基于cocoscreator2.2.2版本。
