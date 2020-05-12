@@ -41,6 +41,9 @@ cc.Class({
         this.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
         this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+
+        //
+        zy.utils.touchSimulation(0, 0);
     },
     reloadCell: function reloadCell() {
         this.moved = false; // 标记本次touchmove已经移动过不再计算

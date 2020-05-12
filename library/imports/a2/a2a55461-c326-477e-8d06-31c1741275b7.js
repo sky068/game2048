@@ -70,7 +70,7 @@ cc.Class({
             cc.director.on(cc.Director.EVENT_AFTER_DRAW, this.onAfterDraw, this);
 
             // 设置屏幕旋转(H5)
-            cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE);
+            // cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE);
             // cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT);
 
             // 设置屏幕适配

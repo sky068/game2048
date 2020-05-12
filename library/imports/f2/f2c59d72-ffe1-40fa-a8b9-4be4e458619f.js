@@ -980,6 +980,68 @@ UtilsOther.bindColumnsSimple = function (rows, colnames) {
 };
 //*******************csv end*******************
 
+// 模拟屏幕点击
+UtilsOther.getHTMLElementPosition = function (element) {
+    var docElem = document.documentElement;
+    var leftOffset = window.pageXOffset - docElem.clientLeft;
+    var topOffset = window.pageYOffset - docElem.clientTop;
+    if (typeof element.getBoundingClientRect === 'function') {
+        var box = element.getBoundingClientRect();
+        return {
+            left: box.left + leftOffset,
+            top: box.top + topOffset,
+            width: box.width,
+            height: box.height
+        };
+    } else {
+        if (element instanceof HTMLCanvasElement) {
+            return {
+                left: leftOffset,
+                top: topOffset,
+                width: element.width,
+                height: element.height
+            };
+        } else {
+            return {
+                left: leftOffset,
+                top: topOffset,
+                width: parseInt(element.style.width),
+                height: parseInt(element.style.height)
+            };
+        }
+    }
+};
+
+// x,y世界坐标
+UtilsOther.touchSimulation = function (x, y) {
+    var rect = void 0;
+    //兼容2.2.x 与 2.3.2
+    var inputManager = window._cc ? window['_cc'].inputManager : cc.internal.inputManager;
+    if (cc.sys.isBrowser) {
+        var canvas = document.getElementById("GameCanvas");
+        rect = UtilsOther.getHTMLElementPosition(canvas);
+    } else {
+        rect = cc.view.getFrameSize();
+        rect.left = 0;
+        rect.top = 0;
+    }
+
+    // 将x,y从Creator世界坐标转换到设备窗口坐标
+    var vp = cc.view.getViewportRect();
+    var sx = cc.view.getScaleX();
+    var sy = cc.view.getScaleY();
+    var ratio = cc.view.getDevicePixelRatio();
+    var htmlx = (x * sx + vp.x) / ratio + rect.left;
+    var htmly = rect.top + rect.height - (y * sy + vp.y) / ratio;
+    var pt = cc.v2(htmlx, htmly);
+
+    cc.log("\u6A21\u62DF\u70B9\u51FB\u5750\u6807\uFF1A" + pt.x + ", " + pt.y);
+    var touch = inputManager.getTouchByXY(pt.x, pt.y, rect);
+    inputManager.handleTouchesBegin([touch]);
+    setTimeout(function () {
+        inputManager.handleTouchesEnd([touch]);
+    }, 200);
+};
 
 module.exports = UtilsOther;
 

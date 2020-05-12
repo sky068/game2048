@@ -5,8 +5,8 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 452,
-      "y": 104,
+      "x": 471,
+      "y": 182,
       "width": 1259,
       "height": 871,
       "layout": {
@@ -87,7 +87,8 @@
         "cocos-services"
       ]
     },
-    "worker": {}
+    "worker": {},
+    "window-1589274878232": {}
   },
   "panels": {
     "preferences": {
@@ -103,8 +104,8 @@
       "height": 612
     },
     "builder": {
-      "x": 674,
-      "y": 144,
+      "x": 626,
+      "y": 186,
       "width": 654,
       "height": 722
     }
