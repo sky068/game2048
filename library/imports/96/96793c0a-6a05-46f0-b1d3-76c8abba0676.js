@@ -41,6 +41,8 @@ cc.Class({
         this.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
         this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        // 默认聚焦画布，否则不点击屏幕就收不到键盘事件
+        cc.game.canvas.focus();
     },
     reloadCell: function reloadCell() {
         this.moved = false; // 标记本次touchmove已经移动过不再计算
