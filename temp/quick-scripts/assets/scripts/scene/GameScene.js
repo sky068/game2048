@@ -275,7 +275,7 @@ cc.Class({
                         this.board[row][col] = 0;
 
                         this.moveActionHorizonal(row, col, k, false);
-                    } else if (this.board[row][k] == this.board[row][col] && this.noBlockHorizonal(row, col, k)) {
+                    } else if (this.board[row][k] == this.board[row][col] && this.noBlockHorizonal(row, k, col)) {
                         this.score += this.board[row][col] * 2;
                         this.board[row][k] += this.board[row][col];
                         this.board[row][col] = 0;

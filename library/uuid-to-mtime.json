@@ -610,7 +610,7 @@
     "relativePath": "scripts/pop/SettingPop.js"
   },
   "3b1b6245-f429-4cc6-8ef2-3876a34ef442": {
-    "asset": 1588153056800,
+    "asset": 1589284660696,
     "meta": 1582525829527,
     "relativePath": "scripts/scene"
   },
@@ -645,8 +645,8 @@
     "relativePath": "resources/materials/bright.mtl"
   },
   "ac5e0f56-5f75-4e5f-9799-a1ffb7694dbe": {
-    "asset": 1589279647690,
-    "meta": 1589279647696,
+    "asset": 1589338218683,
+    "meta": 1589338218692,
     "relativePath": "scenes/Game.fire"
   },
   "53b326cd-df52-4b45-9c1e-1a6475204839": {
@@ -1090,8 +1090,8 @@
     "relativePath": "model/primitives.fbx"
   },
   "96793c0a-6a05-46f0-b1d3-76c8abba0676": {
-    "asset": 1589279726901,
-    "meta": 1589279729024,
+    "asset": 1589338216755,
+    "meta": 1589338218480,
     "relativePath": "scripts/scene/GameScene.js"
   }
 }
